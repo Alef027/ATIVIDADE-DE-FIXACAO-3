@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade de fixação 3</title>
+</head>
+<body>
+    <!--Exercício 01-->
+    <script>
+        
+        let nota01 = parseFloat(prompt("Digite a primeira nota: "));
+
+        let nota02 = parseFloat(prompt("Digite a segunda nota: "));
+
+        function media() {
+            c = (nota01 + nota02) / 2;
+            return c;
+        }
+        
+        let mediafinal = media(nota01, nota02);
+
+        console.log(mediafinal);
+        
+        if (mediafinal == 10) {
+            alert(`Aprovado com Distinção`);
+        } else if (mediafinal >= 7 ) {
+            alert(`Aprovado`);
+        } else {
+            alert(`Reprovado`);
+        }
+    </script>
+
+    <!--Exercício 02-->
+    <script>
+        let salario = parseFloat(prompt("Digite o salario a para calcular o reajuste: "));
+
+        function reajuste20() {
+            c = salario * 0.2;
+            return c;
+        }
+
+        let aumento20 = reajuste20(salario);
+        console.log(aumento20);
+
+        function reajuste15() {
+            c = salario * 0.15;
+            return c;
+        }
+
+        let aumento15 = reajuste15(salario);
+        console.log(aumento15);
+
+        function reajuste10() {
+            c = salario * 0.1;
+            return c;
+        }
+
+        let aumento10 = reajuste10(salario);
+        console.log(aumento10);
+
+        function reajuste5() {
+            c = salario * 0.05;
+            return c;
+        }
+
+        let aumento5 = reajuste5(salario);
+        console.log(aumento5);
+
+        if (salario <= 280) {
+           alert(`           O salário antes do reajuste: ${salario};
+           O percentual de aumento aplicado: 20%;
+           O valor do aumento: ${aumento20};
+           O novo salário: ${salario+aumento20}.`);
+        } else if (salario <= 700) {
+           alert(`           O salário antes do reajuste: ${salario};
+           O percentual de aumento aplicado: 15%;
+           O valor do aumento: ${aumento15};
+           O novo salário: ${salario+aumento15}.`);
+        } else if (salario <= 1500) {
+           alert(`           O salário antes do reajuste: ${salario};
+           O percentual de aumento aplicado: 10%;
+           O valor do aumento: ${aumento10};
+           O novo salário: ${salario+aumento10}.`);
+        } else {
+           alert(`           O salário antes do reajuste: ${salario};
+           O percentual de aumento aplicado: 5%;
+           O valor do aumento: ${aumento5};
+           O novo salário: ${salario+aumento5}.`);
+        }
+    </script>
+
+    <!--Exercício 03-->
+    <script>
+        let valor_horas = parseFloat(prompt("Digite o valor de ganho por hora trabalhada: "));
+
+        let horas = parseFloat(prompt("Digite a quantidade de horas trabalhadas: "));
+
+        let salario_bruto = horas * valor_horas;
+        console.log(salario_bruto);
+
+        let FGTS = salario_bruto * 0.11;
+        console.log(FGTS);
+
+        let sinticato = salario_bruto * 0.03;
+        console.log(sinticato);
+
+        function desc20() {
+            c = salario_bruto * 0.2;
+            return c;
+        }
+
+        let desconto20 = desc20(salario_bruto);
+        console.log(desconto20);
+
+        function desc10() {
+            c = salario_bruto * 0.1;
+            return c;
+        }
+
+        let desconto10 = desc10(salario_bruto);
+        console.log(desconto10);
+
+        function desc05() {
+            c = salario_bruto * 0.05;
+            return c;
+        }
+
+        let desconto05 = desc05(salario_bruto);
+        console.log(desconto05);
+
+        if (salario_bruto <= 900) {
+            alert(`           Salário Bruto: R$ ${salario_bruto};
+            (-) Sinticato (3%): R$ ${sinticato};
+            FGTS (11%): R$ ${FGTS};
+            Total de descontos: R$ ${sinticato};
+            Salário Liquido: R$ ${salario_bruto-sinticato}.`);
+        } else if (salario_bruto <= 1500) {
+            alert(`           Salário Bruto: R$ ${salario_bruto};
+            (-) IR (5%): R$ ${desconto05};
+            (-) Sinticato (3%): R$ ${sinticato};
+            FGTS (11%): R$ ${FGTS};
+            Total de descontos: R$ ${desconto05 + sinticato};
+            Salário Liquido: R$ ${salario_bruto - desconto05 - sinticato}.`);
+        } else if (salario_bruto <= 2500) {
+            alert(`           Salário Bruto: R$ ${salario_bruto};
+            (-) IR (10%): R$ ${desconto10};
+            (-) Sinticato (3%): R$ ${sinticato};
+            FGTS (11%): R$ ${FGTS};
+            Total de descontos: R$ ${desconto10 + sinticato};
+            Salário Liquido: R$ ${salario_bruto - desconto10 - sinticato}.`);
+        } else {
+            alert(`           Salário Bruto: R$ ${salario_bruto};
+            (-) IR (20%): R$ ${desconto20};
+            (-) Sinticato (3%): R$ ${sinticato};
+            FGTS (11%): R$ ${FGTS};
+            Total de descontos: R$ ${desconto20 + sinticato};
+            Salário Liquido: R$ ${salario_bruto - desconto20 - sinticato}.`);
+        }
+    </script>
+</body>
+</html>
